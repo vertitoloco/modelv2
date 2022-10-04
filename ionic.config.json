@@ -1,0 +1,7 @@
+{
+  "name": "ModelApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
