@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Curso DAM</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="Inicio" color="secondary"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let e of asignatura">
+      <ion-icon [name] = "e.icono" ></ion-icon>
+      <ion-label >{{e.nombre}}</ion-label>
+      <ion-checkbox [color]="e.color"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>
