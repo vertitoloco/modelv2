@@ -5,23 +5,13 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: '',
     component: TabsPage,
     children: [
       {
-        path: 'DAM',
-        children: [
-          {
-            path: '',
-            loadChildren: '../DAM/DAM.module#DAMModule'
-          }
-        ]
+        path: 'tabs',
+        loadChildren: () => import('../DAM/DAM.module').then(m => m.DAMPageModule)
       },
-      {
-        path: '',
-        redirectTo: '/app/tabs/DAM',
-        pathMatch: 'full'
-      }
     ]
   }
 ];
