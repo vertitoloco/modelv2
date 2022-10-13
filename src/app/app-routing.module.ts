@@ -23,6 +23,14 @@ const routes: Routes = [
     path: 'tabs',
     loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
   },
+  {
+    path: 'dam2',
+    loadChildren: () => import('./pages/dam2/dam2.module').then( m => m.DAM2PageModule)
+  },
+  {
+    path: 'fct',
+    loadChildren: () => import('./pages/fct/fct.module').then( m => m.FCTPageModule)
+  },
 ];
 
 @NgModule({

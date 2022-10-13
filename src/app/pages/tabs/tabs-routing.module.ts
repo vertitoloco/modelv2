@@ -9,8 +9,16 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tabs',
+        path: 'DAM',
         loadChildren: () => import('../DAM/DAM.module').then(m => m.DAMPageModule)
+      },
+      {
+        path: 'dam2',
+        loadChildren: () => import('../dam2/dam2.module').then( m => m.DAM2PageModule)
+      },
+      {
+        path: 'fct',
+        loadChildren: () => import('../fct/fct.module').then( m => m.FCTPageModule)
       },
     ]
   }

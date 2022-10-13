@@ -17,12 +17,20 @@
     <ion-input [(ngModel)]="apellidos"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="floating">DNI</ion-label>
-    <ion-input [(ngModel)]="dni"></ion-input>
+    <ion-label position="floating">Localidad</ion-label>
+    <ion-input [(ngModel)]="localidad"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Estudios Cursados</ion-label>
+    <ion-input [(ngModel)]="estudioscursados"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Email</ion-label>
     <ion-input [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input [(ngModel)]="contrasena" [maxlength]=17></ion-input>
   </ion-item>
   <ion-button fill="solid" (click)="submit()">Enviar</ion-button>
 </ion-content>
