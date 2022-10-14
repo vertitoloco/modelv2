@@ -1,12 +1,38 @@
 <ion-header>
+  <ion-toolbar>
+    <ion-title>1ºDAM</ion-title>
+    <ion-button slot="end">
+      <ion-icon slot="icon-only" name="star"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let e of asignatura">
-      <ion-icon [name] = "e.icono" ></ion-icon>
-      <ion-label >{{e.nombre}}</ion-label>
-      <ion-checkbox [color]="e.color"></ion-checkbox>
+    <ion-item> 
+      <ion-avatar slot="start"><img src="https://intl-blog.imgix.net/wp-content/uploads/2019/02/software-de-base-de-datos-gratuitos-de-codigo-abierto.png?w=768" /></ion-avatar>
+      <ion-label>Base de datos</ion-label>
+      <ion-checkbox color="primary" (click)="basedatos()"></ion-checkbox>
+    </ion-item>
+    <ion-item> 
+      <ion-avatar slot="start"><img src="https://www.armadilloamarillo.com/wp-content/uploads/fondo-de-programacion-web_ok.jpg" /></ion-avatar>
+      <ion-label>Programación</ion-label>
+      <ion-checkbox color="primary" (click)="programacion()"></ion-checkbox>
+    </ion-item>
+    <ion-item> 
+      <ion-avatar slot="start"><img src="https://telosabes.com/wp-content/uploads/2019/12/sistemasinformaticos.jpg" /></ion-avatar>
+      <ion-label>Sistemas Informaticos</ion-label>
+      <ion-checkbox color="dark" (click)="sistemas()"></ion-checkbox>
+    </ion-item>
+    <ion-item> 
+      <ion-avatar slot="start"><img src="https://tecnologiandroid.com/wp-content/uploads/2021/04/Que-es-un-IDE-1024x604.png.webp" /></ion-avatar>
+      <ion-label>Entornos de desarrollo</ion-label>
+      <ion-checkbox color="light" (click)="entornos()"></ion-checkbox>
+    </ion-item>
+    <ion-item> 
+      <ion-avatar slot="start"><img src="https://www.ticarte.com/sites/su/styles/maxx/public/users/7/teaser/code-markup.jpg?itok=AkjDY2ny" /></ion-avatar>
+      <ion-label>Lenguaje de Marcas</ion-label>
+      <ion-checkbox color="primary" (click)="lenguaje()"></ion-checkbox>
     </ion-item>
   </ion-list>
 </ion-content>

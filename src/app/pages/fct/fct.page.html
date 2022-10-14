@@ -1,10 +1,59 @@
 <ion-header>
+  <ion-toolbar>
+    <ion-title>FCT</ion-title>
+    <ion-button slot="end">
+      <ion-icon slot="icon-only" name="star"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
 </ion-header>
-
 <ion-content>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="share"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button href="https://www.instagram.com/alvaropeco95/?hl=es"><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="top">
+      <ion-fab-button href="https://twitter.com/home"><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+   </ion-fab-list>
+</ion-fab>
+
   <ion-list>
-    <ion-item *ngFor="let e of items">
-      <ion-label >{{e.nombre}}</ion-label>
-    </ion-item>
+    <ion-card>
+      <img src="https://pbs.twimg.com/media/FZ1UUk0WQAAWIX9.jpg:large" height="200" width="200"/>
+      <ion-card-header>
+        <ion-card-title>Real Madrid</ion-card-title>
+        <ion-card-subtitle>En la foto aparece Rodrygo</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        El Real Madrid Club de Fútbol, más conocido simplemente como Real Madrid, es una entidad polideportiva con sede en Madrid, España.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="../assets/Manolo.PNG" height="200" width="200"/>
+      <ion-card-header>
+        <ion-card-title>Sevilla FC</ion-card-title>
+        <ion-card-subtitle>En la foto aparece un aficionado del Sevilla</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+       El Sevilla FC, un club con muchos años de historia pero con pocos titulos, se dedica a heredar jugadores retirados de grandes clubes como el Real Madrid.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://pbs.twimg.com/profile_images/867708314548916224/WDjAzg8U_400x400.jpg" />
+      <ion-card-header>
+        <ion-card-title>EFA Moratalaz</ion-card-title>
+        <ion-card-subtitle>Icono EFA Moratalaz</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        EFA Moratalaz: centro de ESO y Formación Profesional concertado con la Consejería de Educación, Cultura y Deportes de Castilla-La Mancha.
+      </ion-card-content>
+    </ion-card>
   </ion-list>
 </ion-content>

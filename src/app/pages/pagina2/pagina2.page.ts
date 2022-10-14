@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ViewChild} from  '@angular/core';
 
 @Component({
   selector: 'app-pagina2',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pagina2.page.scss'],
 })
 export class Pagina2Page implements OnInit {
+  @ViewChild('passwordEyeRegister') passwordEye;
+  passwordTypeInput  =  'password';
+  iconpassword  =  'eye-off';
   nombre : String;
   apellidos : String;
   localidad :String;
@@ -18,6 +22,11 @@ export class Pagina2Page implements OnInit {
   ngOnInit() {
   }
 
+  togglePasswordMode() {
+    this.passwordTypeInput  =  this.passwordTypeInput  ===  'text'  ?  'password'  :  'text';
+    this.iconpassword  =  this.iconpassword  ===  'eye-off'  ?  'eye'  :  'eye-off';
+    this.passwordEye.el.setFocus();
+  }
   
   submit() {
     if(this.nombre==null){

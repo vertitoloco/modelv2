@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLinkActive } from '@angular/router';
+import { ToastController } from '@ionic/angular';
+
+
 
 @Component({
   selector: 'app-DAMPage',
@@ -8,17 +11,45 @@ import { RouterLinkActive } from '@angular/router';
 })
 export class DAMPage implements OnInit {
 
-  constructor() { }
+  constructor(public toastController: ToastController) { }
 
   ngOnInit() {
   }
+  async basedatos() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Base de datos',
+      duration: 2000,
+    });
+    toast.present();
+  }
   
-  asignatura = [
-    {nombre: "Base de datos", icono:"cloud-upload-outline", color: "primary"},
-    {nombre: "Programación", icono:"keypad-outline", color: "primary"},
-    {nombre: "Sistemas informáticos", icono:"calculator-outline", color: "dark"},
-    {nombre: "Entornos de desarrollo", icono:"code-outline", color: "light"},
-    {nombre: "Lenguaje de marcas", icono:"logo-html5", color: "primary"},
-  ]
-
+  async programacion() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Programacion',
+      duration: 2000,
+    });
+    toast.present();
+  }
+  
+  async sistemas() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Sistemas Informáticos',
+      duration: 2000,
+    });
+    toast.present();
+  }
+  async entornos() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Entornos de desarrollo',
+      duration: 2000,
+    });
+    toast.present();
+  }
+  async lenguaje() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Lenguaje de Marcas',
+      duration: 2000,
+    });
+    toast.present();
+  } 
 }
